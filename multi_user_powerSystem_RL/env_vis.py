@@ -67,9 +67,12 @@ class EPlot():
                 ax[0].legend(h1, l1, prop={'size': 16}, bbox_to_anchor=(0, 1), loc='upper left')
             if s_n==1:
                 use_power = np.array([[self.actions[us][t]*self.u_class.config[self.u_class.agents[us]][0] for us in range(self.us)]for t in range(self.t)])
-                use_p =pd.DataFrame(use_power.T,columns=["user-1","user-2","user-3"])
-                x_axis = list(range(self.t))
-                ax[1].plot(x_axis, np.sum(use_power,axis=0), "r-*")
+                use_p =pd.DataFrame(use_power.T,columns=["user-1","user-2","user-3", 'user-4','user-5','user-6',
+                                                           'user-7', 'user-8', 'user-9', 'user-10', 'user-11', 'user-12',
+                                                           'user-13','user-14','user-15', 'user-16', 'user-17','user-18', 'user-19', 'user-20',
+                                                           'user-21', 'user-22', 'user-23', 'user-24'])
+                x_axis = list((range(self.t)))
+                ax[1].plot(x_axis, (use_power), "r-*")
                 ax[1].set_xlim(-0.5, self.t-0.5)
                 ax = use_p.plot(kind='bar', stacked=True, ax = ax[1],rot=0)
 

@@ -125,7 +125,7 @@ for episode in tqdm.trange(args.num_episode):
             agent2_log.append(agent2_episode_log)
             agent3_log.append(agent3_episode_log)
             break
-    np.save('./reward_log/episode_reward_log_{0}'.format("0620"), episode_reward_log)  # plot用
+    np.save('episode_reward_log_{0}'.format("0620"), episode_reward_log)  # plot用
 
     if episode > 40 and episode % 4 == 0:
         agent.update()
@@ -157,7 +157,7 @@ actions =np.array([max_sc_1,
                 max_sc_2,
                 max_sc_3])
 print(actions)
-episode_reward_log = np.load('./reward_log/episode_reward_log_0620.npy', allow_pickle=True)
+episode_reward_log = np.load('episode_reward_log_0620.npy', allow_pickle=True)
 pyplot.plot(episode_reward_log)
 pyplot.show()
 pyplot.plot

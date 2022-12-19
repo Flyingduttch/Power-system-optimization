@@ -2,7 +2,7 @@ import sys
 import numpy as np
 import random
 
-random.seed(2022)
+random.seed(20)
 
 
 class Environment:

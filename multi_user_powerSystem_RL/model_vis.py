@@ -17,7 +17,7 @@ class MPlot():
     """
 
     def __init__(self, model: object = None,inf_cls=None) -> None:
-        self.plot_path = "./plot_ouput/"
+        self.plot_path = "./plot_output/"
         os.makedirs(self.plot_path, exist_ok=True)
         self.u_class = inf_cls
         self.clear_plot()
